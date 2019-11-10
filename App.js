@@ -1,16 +1,15 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
-  Text,
+  StyleSheet
 } from 'react-native';
 
-import TodoList from './components/TodoList';
+import Todo from './components/Todo';
 
 function App() {
   return (
     <SafeAreaView style={styles.container}>
-     <TodoList />
+        <Todo />
     </SafeAreaView>
   );
 };
