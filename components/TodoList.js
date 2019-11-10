@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {FlatList} from 'react-native';
 import TodoItem from './TodoItem';
 
-const TodoList = ({todoItems}) => {
+const TodoList = ({todoItems, removeTodoItem, completeTodoItem}) => {
     return (
         <FlatList 
             data={todoItems}
@@ -10,9 +10,11 @@ const TodoList = ({todoItems}) => {
                 <TodoItem
                     title={item.title}
                     isComplete={item.isComplete}
+                    complete={() => completeTodoItem(item.id)}
+                    remove={() => removeTodoItem(item.id)}
                 />
             )}
-            keyExtractor={(item) => item.id.toString()}
+            keyExtractor={(item) => item.id}
         />
     );
 }

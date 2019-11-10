@@ -23,10 +23,28 @@ const Todo = () => {
         setText('');
     }
 
+    const completeTodoItem = (id) => setTodoItems(todoItems.map(
+        (item) => {
+            if(item.id === id) {
+                return {...item, isComplete: !item.isComplete};
+            }
+            else {
+                return item;
+            }
+
+        }
+    ));
+
+    const removeTodoItem = (id) => setTodoItems(
+        todoItems.filter(item => item.id !== id)
+    );
+
     return (
         <>
             <TodoList 
                 todoItems={todoItems}
+                completeTodoItem={completeTodoItem}
+                removeTodoItem={removeTodoItem}
             />
             <TextInput 
                 style={styles.textInput}
