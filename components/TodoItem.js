@@ -44,6 +44,7 @@ export default TodoItem;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
         marginHorizontal: 20,
         marginVertical: 10,
