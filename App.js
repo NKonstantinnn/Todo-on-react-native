@@ -5,10 +5,13 @@ import {
   Text,
 } from 'react-native';
 
+import TodoItem from './components/TodoItem';
+
 function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>App</Text>
+     <TodoItem />
+     <TodoItem />
     </SafeAreaView>
   );
 };
@@ -16,7 +19,6 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center'
   }
 });
